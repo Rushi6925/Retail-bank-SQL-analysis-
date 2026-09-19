@@ -110,6 +110,7 @@ Retail-Banking-SQL-Project/
 ├── 01_Retail_banking_db.sql
 ├── 02_Analysis_query_retail_banking.sql
 ├── ER_Diagram.png
+├── Analysis_question_set    
 └── README.md
 ```
 
@@ -133,9 +134,3 @@ Some things I plan to add later:
 * Power BI dashboard
 * More loan analysis
 * Better data visualizations
-
-## Author
-
-**Rushikesh Panchariya**
-
-GitHub: [Rushi6925](https://github.com/Rushi6925)
