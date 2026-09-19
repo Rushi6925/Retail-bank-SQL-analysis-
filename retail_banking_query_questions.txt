@@ -1,0 +1,117 @@
+RETAIL BANKING DATABASE PROJECT
+Query Questions
+
+Database used: retail_banking
+Tables: branch, employee, customer, account_type, account, transaction,
+card, loan_type, loan, loan_payment, beneficiary, fixed_deposit
+
+
+SECTION A — BASIC QUERIES
+--------------------------
+1. Display the details of all customers whose KYC has been verified.
+2. Which accounts currently have a balance less than Rs. 20,000?
+3. List all customers whose first name begins with the letter 'A'.
+4. Show all the transactions that took place during March 2025.
+5. Display all employees earning above Rs. 60,000 per month, sorted from
+   highest to lowest salary.
+
+
+SECTION B — AGGREGATE FUNCTIONS (GROUP BY / HAVING)
+-----------------------------------------------------
+6. What is the total balance held by each branch?
+7. Find the average balance maintained for each type of account.
+8. How many accounts were opened in each calendar year?
+9. Which branches have more than 2 customer accounts?
+10. Find the total amount transacted through each payment mode
+    (cash, UPI, NEFT, etc.).
+
+
+SECTION C — JOIN QUERIES
+--------------------------
+11. Display each customer's name along with their account number,
+    branch name, and current balance.
+12. List every transaction along with the customer's name and the
+    branch where the account is held.
+13. Show each employee's name next to the name of their manager
+    (self join on the employee table).
+14. List every customer who has taken a loan, showing the type of loan
+    and the name of the employee who approved it.
+15. Find accounts that have never had a single transaction recorded
+    against them.
+16. Show all customers along with their fixed deposit amount and
+    maturity date, including customers who don't have an FD at all.
+
+
+SECTION D — SUBQUERIES
+-------------------------
+17. Which customers have a balance higher than the average balance
+    across all accounts?
+18. Find the customer who made the single largest transaction.
+19. List customers who have never taken out a loan.
+20. Find accounts whose balance exceeds the minimum balance required
+    for their account type.
+
+
+SECTION E — SET OPERATIONS
+-----------------------------
+21. Find customers who hold both a loan and a fixed deposit.
+22. List all the cities where the bank either has a branch or has a
+    customer registered.
+
+
+SECTION F — WINDOW FUNCTIONS, CASE, DATE FUNCTIONS
+------------------------------------------------------
+23. Rank customers by their account balance within each branch.
+24. Show a running total of deposits for each account, ordered by
+    transaction date.
+25. Classify each loan as Low Risk, Medium Risk, or High Risk based on
+    how much of the principal is still outstanding.
+26. Identify loans that have run past their sanctioned tenure and are
+    still marked active.
+
+
+SECTION G — VIEWS
+--------------------
+27. Create a view that shows each customer's name along with their
+    total balance across all accounts.
+28. Create a view listing only the active loans, along with the
+    customer's name, loan type, and the employee who approved it.
+29. Create a view summarizing each branch's performance — total
+    accounts, total deposits, and total loans disbursed.
+
+
+SECTION H — STORED PROCEDURES
+---------------------------------
+30. Write a procedure that transfers funds from one account to
+    another — it should debit the sender, credit the receiver, and
+    record both transactions, all within a single atomic operation.
+31. Write a procedure that records a loan payment and reduces the
+    loan's outstanding amount accordingly.
+
+
+SECTION I — TRIGGERS
+------------------------
+32. Write a trigger that blocks a withdrawal if it would push the
+    account below the minimum balance required for its account type.
+33. Write a trigger that automatically updates the account's balance
+    whenever a new transaction is added.
+34. Write a trigger that logs any change made to a loan's status into
+    a separate audit table.
+
+
+SECTION J — CONSTRAINT TESTING
+----------------------------------
+35. Try adding a customer with a PAN number that already exists —
+    check that it gets rejected.
+36. Try setting an account balance to a negative value — confirm the
+    database refuses it.
+37. Try adding a transaction against an account number that doesn't
+    exist — confirm the foreign key stops it.
+
+
+NOTE
+------
+For the project to be considered complete, run and screenshot all of
+Sections A to F (26 queries), test each view, procedure, and trigger
+from Sections G to I with real data, and demonstrate at least 2-3 of
+the constraint tests from Section J actually failing as expected.
